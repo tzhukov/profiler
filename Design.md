@@ -14,3 +14,12 @@ blobs poc - badger, v1 - add s3/minio support
 index - portable sql with poc - sqlite, v1 - add postgres support, use versioned migrations
 
 For both of these we will use adapter pattern
+
+
+  ### DaemonSet manifest snippet you'll need
+
+    env:
+      - name: NODE_NAME
+        valueFrom:
+          fieldRef:
+            fieldPath: spec.nodeName
