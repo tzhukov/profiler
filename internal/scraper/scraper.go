@@ -119,7 +119,6 @@ func (s *Scraper) round(ctx context.Context) {
 
 	var wg sync.WaitGroup
 	for _, pod := range pods {
-		pod := pod // capture loop var
 		if !podScrapeable(pod) {
 			continue
 		}
